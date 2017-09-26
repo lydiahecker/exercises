@@ -21,5 +21,12 @@
 
 
 
+speed = 75
 
+distance_six = 6 * speed
+distance_ten = 10 * speed
+distance_fifteen = 15 * speed
 
+print("After six hours you will have gone", distance_six, "miles")
+print("After ten hours you will have gone", distance_ten, "miles")
+print("After fifteen hours you will have gone", distance_fifteen, "miles")
