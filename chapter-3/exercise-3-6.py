@@ -43,4 +43,23 @@
 
 # print message for the user
 
+day = input("What day is it? ")
+i_day = int(day)
+month = input("What month is it? ")
+i_month = int(month)
+year = input("What year is it? ")
+i_year = int(year)
+equation = i_day * i_month
 
+if i_month > 12 or i_month < 1:
+    print("Invalid month.")
+elif i_day > 31 or i_day < 1:
+    print("Invalid day.")
+elif i_year > 99 or i_year < 0:
+    print("Invalid year.")
+else:
+    print("The date is", i_month,"/",i_day,"/",i_year)
+    if equation == i_year:
+        print("The date is magic.")
+    else:
+        print("The date is not magic.")

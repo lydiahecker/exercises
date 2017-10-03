@@ -6,7 +6,6 @@
 # then display the weight and a range message.
 
 
-
 # Global constants for minimum, maximum and mass multiplier values
 
 
@@ -24,9 +23,20 @@
 # If weight > maximum or < than minimum display an appropriate message
 
 
+newton = 9.81
+minimum = 0
+maximum = 100000000000
 
+mass = input("What is the mass in kilograms? ")
+f_mass = float(mass)
 
+weight_newtons = f_mass * newton
 
+print("The weight is", weight_newtons, "newtons.")
 
-
-
+if weight_newtons < minimum:
+    print("The weight is too small.")
+elif weight_newtons > maximum:
+    print("The weight is too big.")
+else:
+    print("The weight is juuuuuuust right.")

@@ -11,15 +11,24 @@
 # Get the person's age.
 # remember to convert the input to an int.
 
-
 # Determine if the person is an infant, child, teenager, or adult and set the category.
 # Use a series of if ... elif ... etc. statements.
 
-
-
-
-
 # display a message with the age category.
 
+age = input("How old are you? ")
+i_age = int(age)
 
+infant = str("This person is an infant.")
+child = str("This person is a child")
+teenager = str("This person is a teenager.")
+adult = str("This person is an adult.")
 
+if i_age < 2:
+    print(infant)
+elif i_age < 13:
+    print(child)
+elif i_age < 18:
+    print(teenager)
+else:
+    print(adult)
