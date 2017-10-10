@@ -36,4 +36,22 @@
 
 # else display message stating that spending and budget were equal.
 
+budget = input("What is the budget? ")
+f_budget = float(budget)
+amount_spent = -1
+total_spent = 0
 
+while amount_spent != 0:
+    amount_spent = input("How much was spent? ")
+    amount_spent = float(amount_spent)
+    total_spent += amount_spent
+    
+difference = f_budget - total_spent
+print("The total spent was", format(total_spent, '.2f'))
+
+if total_spent > f_budget:
+    print("You went over your budget by", format(difference, '.2f'))
+elif total_spent < f_budget:
+    print("You were under your budget by", format(difference, '.2f'))
+else:
+    print("You spent your budget exactly.")

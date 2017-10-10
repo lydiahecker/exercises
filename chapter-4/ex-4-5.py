@@ -34,3 +34,19 @@
 # print the results on the screen, including details for total months, total rainfall,
 #	and average monthly rainfall, formatting any floats to 2 decimal places.
 
+years = input("How many years? ")
+i_years = int(years)
+months = i_years * 12
+total_rainfall = 0
+monthly_rainfall = 0
+
+for num in range(i_years):
+	for num in range(12):
+		monthly_rainfall = input("What was the monthly rainfall this month?")
+		monthly_rainfall = float(monthly_rainfall)
+		total_rainfall += monthly_rainfall
+average_monthly = total_rainfall / months
+
+print("The total rainfall was", format(total_rainfall, '.2f'))
+print("The total number of months was", format(months, '.2f'))
+print("The average montly rainfall was", format(average_monthly, '.2f'))

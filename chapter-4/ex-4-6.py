@@ -24,7 +24,12 @@
 
 #	Display the current Celsius and Fahrenheit values, separated by two tabs
 
+celsius = [0,10,20,30,40,50]
+print("Celsius\tFahrenheit")
+print("____________________")
 
-
+for num in celsius:
+    fahrenheit = num * 9 / 5 + 32
+    print(num,"\t",fahrenheit)
 
 

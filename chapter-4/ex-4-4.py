@@ -23,6 +23,16 @@
     # calculate the distance up to the current hour
 
     # Display the current hour and distance traveled, separated by a tab
+    
 
+speed = input("What was the speed? ")
+i_speed = int(speed)
+time = input("How long did you travel? ")
+i_time = int(time)
+print("Distance\tTime")
+print("______________________")
+for num in range(i_time):
+    distance = num * i_time
+    print(num,"\t",distance)
 
-
+    
