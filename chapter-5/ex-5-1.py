@@ -5,9 +5,7 @@
 # passes it to a function, which calculates its value in miles
 # and displays the result for the user.
 
-
 # Global constant for the ratio of kilometers to miles
-
 
 # define the main function
 
@@ -16,8 +14,6 @@
     # Get distance in kilometers from the user
 
     # pass the distance in kilometers to a function to convert to miles
-
-
 
 # define the function to convert to miles
 # the function takes kilometers as an argument
@@ -30,7 +26,15 @@
     
     # print the results, formatting float values to 2 decimal places
 
-
-
 # Call the main function to start the program
+kilometers = .621371
 
+def function_distance():
+    distance_kilometers = float(input("What is the distance in kilometers? "))
+    function_miles(f_distance_kilometers)
+
+def function_miles(f_distance_kilometers):
+    distance_miles = f_distance_kilometers * kilometers
+    print("The distance in miles is", format(distance_miles, '.2f'))
+    
+function_distance()
