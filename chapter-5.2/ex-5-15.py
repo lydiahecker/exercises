@@ -9,12 +9,9 @@
 
     # define local variables for average and five scores
 
-
     # Get five scores from the user
 
-
     # find the average by passing the scores to a function that returns the average
-
 
     # display grade and average information in tabular form
     # as score, numeric grade, letter grade, separated by tabs
@@ -28,8 +25,6 @@
 
     # display the average and the letter grade for the average
 
-
-
 # Define a function to return the average of 5 grades.
 # This function accepts five values as parameters,
 # computes the average,
@@ -40,8 +35,6 @@
     # calculate the average
     
     # return the average
-
-
 
 # Define a function to return a numeric grade from a number.
 # This function accepts a grade as a parameter,
@@ -58,8 +51,43 @@
     
     # anything else, return F
 
-
 # Call the main function to start the program
 
 
+def main():
+    average = 0
+    score_total = 0
+    score = 0
+    print("Number Grade", "Letter Grade", sep = '\t')
+    print("----------------------------")
+    for test in range(0,5):
+        score = int(input("What is the score? "))
+        score_total += score
+        letter_grade = calculate_letter_grade(score)
+        print(score, letter_grade, sep = '\t')
+    average = calculate_average(score_total)
+    letter_grade = calculate_letter_grade(average)
+    print(average, letter_grade, sep = '\t')
+    
+def calculate_average(score_total):
+    average = score_total / 5
+    return average
+    
+def calculate_letter_grade(score):
+    if score >= 90:
+        letter_grade = "A"
+        return letter_grade
+    elif score >= 80:
+        letter_grade = "B"
+        return letter_grade
+    elif score >= 70:
+        letter_grade = "C"
+        return letter_grade
+    elif score >= 60:
+        letter_grade = "D"
+        return letter_grade
+    else:
+        letter_grade = "F"
+        return letter_grade
 
+main()
