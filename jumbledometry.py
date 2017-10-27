@@ -1,16 +1,15 @@
-def area(width, length):
-    return width * length
+#main
+    #prompt
+    #choose
+    #display
 
-def perimeter(width, length):
-    return 2 * (witdh + length)
-
-import circle
-import rectangle
+from geometry import circle
+from geometry import rectangle
 
 AREA_OF_CIRCLE_CHOICE = 1
 CIRCUMFERENCE_CHOICE = 2
 AREA_RECTANGLE_CHOICE = 3
-PERIMETER_RECTANGLE CHOICE = 4
+PERIMETER_RECTANGLE_CHOICE = 4
 QUIT_CHOICE = 5
 
 def main():
@@ -19,24 +18,9 @@ def main():
 
     while choice != QUIT_CHOICE:
         display_menu()
-
         choice = int(input("Enter your choice: "))
-
-        if choice == AREA_OF_CIRCLE_CHOICE:
-            radius = float(input("Enter the circle's radius: "))
-            print("The area is", circle.area(radius))
-        elif choice == AREA_RECTANGLE_CHOICE:
-            width = float(input("Enter the rectangle's width: "))
-            length = input("Enter the rectangle's length: ")
-            print("The area is",rectangle.area(width,length))
-        elif choice == PERIMETER_RECTANGLE_CHOICE
-            width = float(input("Enter the rectangle's width: "))
-            length = float(input("Enter the rectangle's length: "))
-            print("The perimeter is",rectangle.perimeter(width,length))
-        elif choice == QUIT_CHOICE:
-            print("Exiting the program...")
-        else:
-            print("Error: Invalid selection.")
+        output = handle_choice(choice)
+        print(output)
 
 def display_menu():
     print(" MENU")
@@ -46,12 +30,36 @@ def display_menu():
     print("4) Perimeter of a rectangle")
     print("5) Quit")
 
+def handle_circle_area():
+    radius = float(input("Enter the circle's radius: "))
+    return "The area is" + str(circle.area(radius))
+
+def handle_circle_circumference():
+    radius = float(input("Enter the circle's radius: "))
+    return "The circumference is" + str(circle.circumference(radius))
+
+def handle_rectangle_area():
+    width = float(input("Enter the rectangle's width: "))
+    length = float(input("Enter the rectangle's length: "))
+    return "The area is" + str(rectangle.area(width,length))
+
+def handle_rectanlge_perimeter():
+    width = float(input("Enter the rectangle's width: "))
+    length = float(input("Enter the rectangle's length: "))
+    return "The perimeter is" + str(rectangle.perimeter(width,length))
+
+def handle_choice(choice):
+    if choice == AREA_OF_CIRCLE_CHOICE:
+        return handle_circle_area()
+    elif choice == CIRCUMFERENCE_CHOICE:
+        return handle_circle_circumference()
+    elif choice == AREA_RECTANGLE_CHOICE:
+        return handle_rectangle_area()
+    elif choice == PERIMETER_RECTANGLE_CHOICE:
+        return handle_rectanlge_perimeter()
+    elif choice == QUIT_CHOICE:
+        return "Exiting the program..."
+    else:
+        return "Error: Invalid selection."
+
 main()
-import math
-
-def area(radius):
-    return math.pi * radius**2
-
-def circumference(radius):
-    return 2 * math.pi * radius
-

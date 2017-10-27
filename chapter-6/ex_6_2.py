@@ -5,8 +5,6 @@
 # attempts to open and read five lines of the file,
 # then displays those lines and finally closes the file.
 
-
-
 # define a main function
 
     # Declare local variables, line and filename as strings and counter as int
@@ -18,7 +16,6 @@
     # Read the first line of the file and increment the line counter to 1
     # this is needed to prepare conditions for the while loop to follow
 
-    
     # Use a while loop to read until counter is 5 or reading produces no data
 
 	# remove carriage returns before display, as print() supplies its own
@@ -29,10 +26,21 @@
 
         # Update counter when line is read
 
-
     # Close file
-
 
 # Call the main function to begin the program
 
+def main():
+    line = ''
+    file_name = ''
+    counter = 0
+    file_name = input("Which file? ")
+    file = open(file_name, 'r')
+    line = file.readline()
+    while counter < 5 and line != '':
+        print(line)
+        line = file.readline()
+        counter += 1
+    file.close()
 
+main()
